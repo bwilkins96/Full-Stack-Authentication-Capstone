@@ -65,7 +65,7 @@ function SignUpFormPage () {
                 value={confirmPassword}
                 onChange={e => setConfirmPassword(e.target.value)}
             />
-            <button type='submit'>Sign Up</button>
+            <button className='logInBtn' type='submit'>Sign Up</button>
         </form>
     );
 }

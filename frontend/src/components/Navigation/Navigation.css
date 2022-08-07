@@ -1,0 +1,60 @@
+.navBar {
+    background-color: lightsalmon;
+    padding: 1.5vh 2vw;
+}
+
+.navLink {
+    text-decoration: none;
+    color: rgb(90,90,90);
+    transition: 0.05s;
+}
+
+.navLink:hover {
+    color: black;
+}
+
+.navLinkBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logIn {
+    margin-right: 1vw;
+}
+
+.profileIcon {
+    margin: 0;
+    font-size: large;
+    border-radius: 40px;
+}
+
+.profMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropDown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: indianred;
+    padding: 1vw;
+    border-radius: 20px;
+    margin-top: 0.5vh;
+}
+
+@media screen and (max-width: 800px) {
+    .navLink {
+        font-size: 17px;
+    }
+
+    .logIn {
+        margin-right: 2.5vw;
+    }
+
+    .dropDown {
+        font-size: 17px;
+    }
+}

@@ -6,7 +6,7 @@ form {
     top: 25vh;
     width: fit-content;
     margin: auto;
-    border: 2px solid darkblue;
+    border: 1px solid darkblue;
     border-radius: 20px;
     padding: 5vw;
     background-color: whitesmoke;
@@ -16,26 +16,25 @@ label, input {
     padding: 0.5vh 0;
 }
 
-button {
-    margin-top: 3vh;
-    padding: 0.75vh;
-    border-radius: 15px;
-    background-color: lightgreen;
-    transition: 0.1s;
-    border: 1px solid rgb(0,200,0);
-}
-
-button:hover {
-    background-color: rgb(0,200,0);
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-ul > li {
+.error {
     color: red;
-    list-style: none;
-    padding-bottom: 0.5vh;
+}
+
+.logInBtn {
+    margin-top: 3vh;
+    color: black;
+}
+
+@media screen and (max-width: 800px) {
+    form {
+        padding: 12vw;
+    }
+
+    .error, label, input, .error {
+        font-size: 17px;
+    }
+
+    button {
+        font-size: 15px;
+    }
 }
