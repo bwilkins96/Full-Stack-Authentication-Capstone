@@ -26,6 +26,10 @@ function SignUpFormPage () {
                 .catch(async res => {
                     const data = await res.json();
                     if (data && data.errors) { setErrors(data.errors) }
+
+                    if (res.status === 403) {
+                        setErrors(['Server authentication error. Please refresh page or load application in different browser.']);
+                    }
                 });
         } else {
             return setErrors(['Confirm Password field must be the same as Password field']);
@@ -36,7 +40,7 @@ function SignUpFormPage () {
         <form onSubmit={handleSubmit}>
              <ul>
                 {errors.map((err, idx) => {
-                    return <li key={idx}>{err}</li>
+                    return <li key={idx} className='error'>{err}</li>
                 })}
             </ul>
             <label htmlFor='email'>Email</label>

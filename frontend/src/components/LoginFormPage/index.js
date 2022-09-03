@@ -23,6 +23,10 @@ function LoginFormPage() {
             .catch(async res => {
                 const data = await res.json();
                 if (data && data.errors) { setErrors(data.errors) };
+
+                if (res.status === 403) {
+                    setErrors(['Server authentication error. Please refresh page or load application in different browser.']);
+                }
             });
     }
 
